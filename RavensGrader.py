@@ -36,11 +36,15 @@ def grade():
     setResults=open("SetResults.csv","w")      
     setResults.write("Set,Correct,Incorrect,Skipped\n")
 
-    with open(os.path.join("Problems", "ProblemSetList.txt")) as fd0:
+    #running one time
+    with open(os.path.join("Problems", "ProblemSetListTest.txt")) as fd0:
+    #with open(os.path.join("Problems", "ProblemSetList.txt")) as fd0:
         for line0 in fd0:
             line0 = line0.rstrip()
             totals = {"Correct": 0, "Skipped": 0, "Incorrect": 0}
-            with open(os.path.join("Problems", line0, "ProblemList.txt")) as fd1:
+            #running one time
+            with open(os.path.join("Problems", line0, "ProblemListTest.txt")) as fd1:
+            #with open(os.path.join("Problems", line0, "ProblemList.txt")) as fd1:
                 for line1 in fd1:
                     line1 = line1.rstrip()
                     with open(os.path.join("Problems", line0, line1, "ProblemAnswer.txt")) as fd2:

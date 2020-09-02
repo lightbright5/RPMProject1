@@ -9,8 +9,8 @@
 # These methods will be necessary for the project's main method to run.
 
 # Install Pillow and uncomment this line to access image processing.
-#from PIL import Image
-#import numpy
+from PIL import Image
+import numpy
 
 class Agent:
     # The default constructor for your Agent. Make sure to execute any
@@ -19,6 +19,7 @@ class Agent:
     # Do not add any variables to this signature; they will not be used by
     # main().
     def __init__(self):
+
         pass
 
     # The primary method for solving incoming Raven's Progressive Matrices.
@@ -31,4 +32,14 @@ class Agent:
     # Make sure to return your answer *as an integer* at the end of Solve().
     # Returning your answer as a string may cause your program to crash.
     def Solve(self,problem):
-        return -1
+        self.figs=problem.figures
+        #print(self.listFigures)
+        #for key in self.listFigures:
+        #    print(self.listFigures[key])
+        self.listFigures()
+        return 2
+
+    def listFigures(self):
+        for key in self.figs:
+            print(self.figs[key])
+            

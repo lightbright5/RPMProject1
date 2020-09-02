@@ -29,7 +29,9 @@ def solve():
             # Additional sets of problems will be used when grading projects.
             # You may also write your own problems.
 
-    r = open(os.path.join("Problems","ProblemSetList.txt"))    # ProblemSetList.txt lists the sets to solve.
+    #only run one ravens test
+    r = open(os.path.join("Problems","ProblemSetListTest.txt"))
+    #r = open(os.path.join("Problems","ProblemSetList.txt"))    # ProblemSetList.txt lists the sets to solve.
     line = getNextLine(r)                                   # Sets will be solved in the order they appear in the file.
     while not line=="":                                     # You may modify ProblemSetList.txt for design and debugging.
         sets.append(ProblemSet(line))                       # We will use a fresh copy of all problem sets when grading.

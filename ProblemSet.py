@@ -37,7 +37,9 @@ class ProblemSet:
     #
     # Your agent does not need to use this method.
     def loadProblemSet(self):
-        r = open("Problems" + os.sep + self.name + os.sep + "ProblemList.txt")
+        #only run one test
+        r = open("Problems" + os.sep + self.name + os.sep + "ProblemListTest.txt")
+        #r = open("Problems" + os.sep + self.name + os.sep + "ProblemList.txt")
         line = self.getNextLine(r)
         while not line=="":
             self.loadProblem(line)
